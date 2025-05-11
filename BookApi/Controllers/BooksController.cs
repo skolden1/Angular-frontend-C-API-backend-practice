@@ -17,7 +17,7 @@ namespace BookApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Book>> GetBooks()
         {
-            return Ok(_books); //ok menas status kod 200 (att det fungerade)
+            return Ok(_books); 
         }
     }
 }
