@@ -6,7 +6,7 @@ namespace BookApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            //Här kan vi lägga till services
+            //HÃ¤r kan vi lÃ¤gga till services
             builder.Services.AddControllers();
             builder.Services.AddCors(options =>
             {
@@ -22,13 +22,13 @@ namespace BookApi
 
             app.UseCors("Mycors");
 
-            //Här kan vi lägga till mapping
-            app.MapControllers();  //Så fort en httpreq skickas så känner denna kod av alla httpget/httpost attributer
-            //Och då letar han upp rätt get/postmetod så att dom körs
+            //HÃ¤r kan vi lÃ¤gga till mapping
+            app.MapControllers();  
+            
 
             app.MapGet("/", () =>
             {
-                return Results.Redirect("/api/books"); //om man är på default page så blir man redirectad till denna adress ist
+                return Results.Redirect("/api/books"); //om man Ã¤r pÃ¥ default page sÃ¥ blir man redirectad till denna adress ist
             });
 
             app.Run();
